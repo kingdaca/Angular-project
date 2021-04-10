@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <div class="card" style="width: 18rem;">
+        <img src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Name : {{user.name}}</h5>
+          <p class="card-text">Last name : {{user.lastName}}</p>
+          <p class="card-text">Email : {{user.email}}</p>
+          <p class="card-text">Adress : {{user.adress}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 button">
+      <a routerLink="myProducts"><button class="btn btn-warning">My products</button></a><br/><br/>
+      <a routerLink="myOrder"><button class="btn btn-warning">My order</button></a>
+    </div>
+  </div>
+</div>

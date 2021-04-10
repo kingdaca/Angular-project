@@ -1,0 +1,40 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a routerLink="home">Home</a></li>
+      <li><a routerLink="models">Models</a></li>
+
+      <li><a *ngIf="cookie.get('loggedin') == 'true'" routerLink="addCar">Add car</a></li>
+
+      <li *ngIf="cookie.get('role') == 'admin'" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dashboard
+          <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a routerLink="addModel">Add model</a></li>
+          <li><a routerLink="addMark">Add mark</a></li>
+          <li><a routerLink="userTable">Table of users</a></li>
+          <li><a routerLink="tableProducts">Table of products</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a routerLink="profile" *ngIf="cookie.get('loggedin') == 'true'; " href="#"><span
+          class="glyphicon glyphicon-user"></span> {{cookie.get('username')}}</a></li>
+        <li>
+          <a *ngIf="cookie.get('loggedin') != 'true';" routerLink="register" href="#"><span class="glyphicon glyphicon-user"></span> Sign
+            Up</a>
+        </li>
+        <li><a *ngIf="cookie.get('loggedin') == 'true';" (click)="logout()" href="#"><span
+          class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        <li>
+        <a *ngIf="cookie.get('loggedin') != 'true'" routerLink="login" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

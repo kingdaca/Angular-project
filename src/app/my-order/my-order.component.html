@@ -1,0 +1,25 @@
+<legend style="text-align: center; color: white;">My order</legend>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+    <tr>
+      <th width="25%">Mark</th>
+      <th width="25%">Model</th>
+      <th width="25%">Price</th>
+      <th width="25%">Options</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let order of orders">
+      <td width="25%">{{order.mark}}</td>
+      <td width="25%">{{order.model}}</td>
+      <td width="25%">{{order.price}}$</td>
+      <td width="25%">
+        <button  style="margin-right: 10px" type="button" (click)="deleteOrder(order)" class="btn btn-danger">Delete</button>
+      </td>
+    </tr>
+
+    </tbody>
+  </table>
+
+

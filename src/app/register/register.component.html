@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <form [formGroup]="fGroup" (ngSubmit)="Register()">
+      <legend> Register </legend>
+
+      <div class="form-group">
+        <label for="fName">Fisrt name : </label>
+        <input formControlName="firstName" type="text" class="form-control" name="" id="fName" placeholder="Input first name">
+      </div>
+      <div class="form-group">
+        <label for="lName">Last name : </label>
+        <input formControlName="lastName" type="text" class="form-control" name="" id="lName" placeholder="Input last name">
+      </div>
+      <div class="form-group">
+        <label for="username">Username : </label>
+        <input formControlName="username" type="text" class="form-control" name="" id="username" placeholder="Input username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password : </label>
+        <input formControlName="password" type="password" class="form-control" name="" id="password" placeholder="Input password">
+      </div>
+      <div class="form-group">
+        <label for="email">Email : </label>
+        <input formControlName="email" type="email" class="form-control" name="" id="email" placeholder="Input email">
+      </div>
+      <div class="form-group">
+        <label for="adress">Adress : </label>
+        <input formControlName="adress" type="text" class="form-control" name="" id="adress" placeholder="Input adress">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone : </label>
+        <input formControlName="phone" type="text" class="form-control" name="" id="phone" placeholder="Input adress">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <legend style="text-align: center; color: white;">All products</legend>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+        <tr>
+          <th width="11%" >ID</th>
+          <th width="11%">Mark</th>
+          <th width="11%">Model</th>
+          <th width="11%">Power</th>
+          <th width="11%">Cubic</th>
+          <th width="11%">Price</th>
+          <th width="11%">img</th>
+          <th width="11%">ID user</th>
+          <th width="11%">Options</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let product of products">
+          <td width="11%">{{product.id}}</td>
+          <td width="11%">{{product.mark}}</td>
+          <td width="11%">{{product.model}}</td>
+          <td width="11%">{{product.power}}</td>
+          <td width="11%">{{product.cubic}}</td>
+          <td width="11%">{{product.price}}$</td>
+          <td width="11%">{{product.img | slice:0:15}}</td>
+          <td>{{product.user}}</td>
+          <td width="11%">
+            <button style="margin-right: 10px;" type="button" (click)="deleteProduct(product)" class="btn btn-danger">Delete</button>
+          </td>
+        </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+</div>
+
+

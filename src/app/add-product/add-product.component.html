@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <form [formGroup]="formGroup" (ngSubmit)="submit()">
+      <legend style="color: white; text-align: center">Add Car</legend>
+
+      <label for="Marka">Mark : </label>
+      <select (click)="saveValue($event)"  formControlName="mark" name="" id="Marka" class="form-control">
+        <option value=""> -- Select One -- </option>
+        <option *ngFor="let mark of marks" value="{{mark.id}}">{{mark.naziv}}</option>
+      </select>
+
+      <label for="Model">Model : </label>
+      <select *ngIf="markID != null " formControlName="model"  name="" id="Model" class="form-control">
+        <option value=""> -- Select One -- </option>
+        <option   *ngFor="let model of models" value="{{model.id_model}}">{{model.naziv_modela}}</option>
+      </select>
+
+      <div class="form-group">
+        <label for="power">Power : </label>
+        <input type="text" formControlName="power" class="form-control" name="" id="power" placeholder="Input power">
+      </div>
+      <div class="form-group">
+        <label for="cubic">Cubic Capacity (in cm³)</label>
+        <input type="text" formControlName="cubic" class="form-control" name="" id="cubic" placeholder="Input cubic">
+      </div>
+
+      <div class="form-group">
+        <label for="price">Price : </label>
+        <input  formControlName="price" class="form-control" name="" id="price" placeholder="Input price"/>
+      </div>
+
+        <div class="form-group">
+          <label for="desc">Description : </label>
+          <textarea  formControlName="desc" class="form-control" name="" id="desc" rows="3"></textarea>
+        </div>
+
+      <div class="form-group">
+        <label for="img">Img path : </label>
+        <input  formControlName="imgPath" type="text" class="form-control" name="" id="img" placeholder="Img path">
+      </div>
+
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>

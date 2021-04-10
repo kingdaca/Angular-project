@@ -1,0 +1,46 @@
+<app-order *ngIf="order.length > 0" [orders]="order"></app-order>
+<div class="container">
+  <div class="row">
+    <div class="row">
+      <div class="container">
+
+        <div class="form-group has-feedback has-search">
+          <span class="glyphicon glyphicon-search form-control-feedback"></span>
+          <input [(ngModel)]="search" type="text" class="form-control" placeholder="Search">
+        </div>
+      </div>
+    </div>
+    <div class="" *ngFor="let article of articles | searchfilter:search">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 celo">
+        <div class="  row no-gutters">
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="padding: 0;">
+            <a [routerLink]="['/models',article.id]"> <img [src]="article.img" class="bd-placeholder-img" width="100%"
+                                                           height="320"
+                                                           xmlns="http://www.w3.org/2000/svg"
+                                                           aria-label="Placeholder: Image"
+                                                           preserveAspectRatio="xMidYMid slice"
+                                                           role="img"/></a>
+
+          </div>
+          <div class="col8 col-xs-8 col-sm-8 col-md-8 col-lg-8 under">
+            <div class="card-body">
+              <p class="card-text">Make : {{article.mark}}<span
+                style="float: right;padding: 12px; font-size: 70%;" class="label label-warning">{{article.price}}
+                $</span>
+              </p>
+              <p class="card-text">Model: {{article.model}}</p>
+              <p class="card-text">Power : {{article.power}}ks</p>
+              <p class="card-text">Cubic Capacity (in cm³) : {{article.cubic}}cm³</p>
+              <h5 class="card-title">{{article.desc}}</h5>
+              <div class="btn1">
+                <button *ngIf="cookie.get('loggedin') == 'true'" type="submit" class="btn2 btn btn-warning"
+                        (click)="addOder(article)">Add to order
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

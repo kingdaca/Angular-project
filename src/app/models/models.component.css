@@ -1,0 +1,75 @@
+.row {
+  color: black;
+}
+
+.no-gutters {
+  margin: 0 auto !important;
+  background-color: white;
+  overflow: auto;
+  resize: none;
+
+}
+
+.rows {
+  padding: 10px;
+  display: block;
+}
+
+.col8 {
+height: 320px;
+
+}
+
+.card-body {
+}
+
+.btn1 {
+  position: absolute;
+  right: 12px;
+  bottom: 15px;
+}
+
+.celo {
+  padding: 10px;
+}
+
+.under {
+  padding: 10px;
+}
+
+#modelistyle button {
+  background-color: rgb(20, 20, 20);
+  color: #9d9d9d;
+  border: 2px orange solid;
+  min-width: 300px;
+  font-size: 20px;
+}
+
+body {
+  color: white;
+}
+
+.dit {
+  padding: 10px;
+}
+
+.pare {
+  background-color: orange;
+}
+
+.mylable {
+  font-size: 150%;
+}
+
+.input[type=text] {
+  width: 130px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+  width: 100%;
+}
+
+@import "../../style/style.css";

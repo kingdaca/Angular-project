@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th>Mark</th>
+        <th>Model</th>
+        <th>Cubic</th>
+        <th>Power</th>
+        <th>Price</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{order.mark}}</td>
+        <td>{{order.model}}</td>
+        <td>{{order.cubic}}</td>
+        <td>{{order.power}}</td>
+        <td>{{order.price}}</td>
+      </tr>
+      </tbody>
+    </table>
+    <h3 >Total price : {{totalPrice()}}
+      <button style="margin-bottom: 50px;" style="float: right;" type="button" (click)="buy()" class="btn btn-warning">Buy</button>
+      <button class="btn btn-danger" (click)="reset()" style="float: right;">Reset</button>
+    </h3>
+
+  </div>
+</div>
+

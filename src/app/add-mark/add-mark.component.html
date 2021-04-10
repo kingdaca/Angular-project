@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <form [formGroup]="formGroup" (ngSubmit)="addMark()">
+      <legend style="text-align: center;color: white;">Add model</legend>
+
+      <div class="form-group">
+        <label for="mark">Mark</label>
+        <input type="text" class="form-control" name="" formControlName="mark" id="mark" placeholder="Input model">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
